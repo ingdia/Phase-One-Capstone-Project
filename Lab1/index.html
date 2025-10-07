@@ -8,7 +8,7 @@
     <title>My Book Buddy</title>
      <style>
 .book {
-  animation: float 4s ease-in-out infinite;
+  animation: float 2s ease-in-out infinite;
 }
 
 @keyframes float {
@@ -42,8 +42,9 @@
         <!--this for the desktop-->
         <nav class="hidden sm:flex space-x-4">
             <a href="./index.html" class="hover:text-orange-800"> Home </a>
-            <a href="./about.html" class="hover:text-orange-800"> About </a>
             <a href="../lab2/favorite.html" class="hover:text-orange-800">Favorite</a>
+            <a href="./about.html" class="hover:text-orange-800"> About </a>
+            
         </nav>
 
         <!--this for the mobile-->
@@ -53,7 +54,7 @@
                 <li><a href="./about.html"> About </a></li>
                 <li><a href="../lab2/favorite.html">Favorite</a></li>
                 <div class="sm:space-x-4  flex items-center">
-                <i class="fa-solid fa-toggle-on text-[30px]"></i>
+                <!-- <i class="fa-solid fa-toggle-on text-[30px]"></i> -->
                  <button class="border-2 text-white bg-orange-800 border-orange-800 rounded-2xl sm:px-8 px-2 py-1 hover:border-orange-800 hover:bg-white hover:text-orange-800">Login</button>
                 </div>
              </ul>
@@ -65,7 +66,7 @@
         </button>
         <!--this the login button and toggle buttorn for only desktop-->
         <div class="sm:space-x-4 hidden sm:flex items-center">
-        <i class="fa-solid fa-toggle-on text-[30px]"></i>
+        <!-- <i class="fa-solid fa-toggle-on text-[30px]"></i> -->
         <button class="border-2 text-white bg-orange-800 border-orange-800 rounded-2xl sm:px-8 px-2 py-1 hover:border-orange-800 hover:bg-white hover:text-orange-800">Login</button>
        </div>
        
@@ -75,9 +76,9 @@
     <!--this the hero section of the page -->
     <div class="text-center space-y-4 ">
       <p class="text-xl">Find books tailored to your taste and explore curated recommendations from readers worldwide.</p>
-      <h1 class="text-[32px]">"<span class="text-orange-800">Books </span>Worth <span class="text-orange-800">Your</span>  Time"</h1>
+      <h1 class="text-[42px]">"<span class="text-orange-800">Books </span>Worth <span class="text-orange-800">Your</span>  Time"</h1>
     </div>
-    <!--this the search bar of the page-->
+  
      <div class="flex justify-center mt-4">
        <button class="bg-transparent text-gray-900 border-2 border-orange-800 px-4 py-2 rounded-full hover:bg-white transition">Explore Books</button>
      </div>
@@ -86,27 +87,27 @@
       <!--right side image-->
        <div class=" flex flex-row space-x-4 sm:space-x-16">
          <div class=" flex flex-col space-y-12 ">
-           <img src="../lab1/images/book.jpg" alt="book" class="h-[130px] w-[100px] " />
-           <img src="../lab1/images/book.jpg" alt="book"  class="h-[130px] w-[100px] book"/>
+           <img src="../lab1/images/image1.jpg" alt="book" class="h-[130px] w-[100px]  book" />
+           <img src="../lab1/images/image2.jpg" alt="book"  class="h-[130px] w-[100px] book"/>
          </div>
          <div class="flex flex-col space-y-12 mt-26">
-           <img src="../lab1/images/book.jpg" alt="book" class="h-[130px] w-[100px]"/>
-           <img src="../lab1/images/book.jpg" alt="book" class="h-[130px] w-[100px]"/>
+           <img src="../lab1/images/image3.jpg" alt="book" class="h-[130px] w-[100px] book"/>
+           <img src="../lab1/images/image4.jpg" alt="book" class="h-[130px] w-[100px] book"/>
          </div>
        </div>
        <!--middle side image-->
        <div class="mt-26">
-        <img src="../lab1/images/book.jpg" alt="book"  class="h-[400px] w-[200px] sm:w-[300px]"/>
+        <img src="../lab1/images/book.jpg" alt="book"  class="h-[400px] w-[200px] sm:w-[300px] "/>
        </div>
        <!--left side image-->
        <div class=" flex flex-row space-x-4 sm:space-x-16">
          <div class=" flex flex-col space-y-12 mt-26">
-           <img src="../lab1/images/book.jpg" alt="book" class="h-[130px] w-[100px]"/>
-           <img src="../lab1/images/book.jpg" alt="book"  class="h-[130px] w-[100px]"/>
+           <img src="../lab1/images/image4.jpg" alt="book" class="h-[130px] w-[100px] book"/>
+           <img src="../lab1/images/image3.jpg" alt="book"  class="h-[130px] w-[100px] book"/>
          </div>
          <div class="flex flex-col space-y-12 ">
-           <img src="../lab1/images/book.jpg" alt="book" class="h-[130px] w-[100px]"/>
-           <img src="../lab1/images/book.jpg" alt="book" class="h-[130px] w-[100px]"/>
+           <img src="../lab1/images/image1.jpg" alt="book" class="h-[130px] w-[100px] book"/>
+           <img src="../lab1/images/image2.jpg" alt="book" class="h-[130px] w-[100px] book"/>
          </div>
        </div>
     </div>
@@ -117,68 +118,82 @@
       <p>Discover your next favorite book by browsing our curated collections and categories.</p>
        <!--FILTERS-->
        <!--grid card for the books (placeholders)-->
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4  gap-4 mt-10">
-       <div class="animate-pulse bg-gray-200 rounded-lg p-4 space-y-2">
-          <div class="w-full h-40 bg-gray-300 rounded mb-4"></div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4  gap-4 mt-10 " id="book-grid">
+       <div class="  bg-gray-200 rounded-lg p-4 space-y-2 book-placeholder">
+          <div class="w-full h-60 bg-gray-300 rounded mb-4">
+            <img src="../lab1/images/image2.jpg" alt="book" class="h-[230px] w-[300px] mx-auto"/>
+          </div>
           <div class="h-4 bg-gray-300 rounded mb-2"></div>
           <div class="h-3 bg-gray-300 rounded sm:w-[150px]"></div>
-          <div class="flex justify-between items-center">
+        <div class="flex justify-between items-center">
           <div class="h-3 bg-gray-300 rounded w-2/3"></div>
-          <div class="h-5 bg-gray-300 rounded-full w-[30px]"></i></div>
+          <div class="h-5 bg-gray-300 rounded-full w-[30px]"><i class="fa-solid fa-heart"></i></div>
        </div>
   </div>
-          <div class="animate-pulse bg-gray-200 rounded-lg p-4 space-y-2">
-    <div class="w-full h-40 bg-gray-300 rounded mb-4"></div>
+          <div class="  bg-gray-200 rounded-lg p-4 space-y-2 book-placeholder">
+    <div class="w-full h-60 bg-gray-300 rounded mb-4">
+      <img src="../lab1/images/book.jpg" alt="book" class="h-[230px] w-[300px] mx-auto"/>
+    </div>
     <div class="h-4 bg-gray-300 rounded mb-2"></div>
     <div class="h-3 bg-gray-300 rounded sm:w-[150px]"></div>
      <div class="flex justify-between items-center">
     <div class="h-3 bg-gray-300 rounded w-2/3"></div>
-    <div class="h-5 bg-gray-300 rounded-full w-[30px]"></i></div>
+    <div class="h-5 bg-gray-300 rounded-full w-[30px]"><i class="fa-solid fa-heart"></i></div>
      </div>
   </div>
-          <div class="animate-pulse bg-gray-200 rounded-lg p-4 space-y-2">
-    <div class="w-full h-40 bg-gray-300 rounded mb-4"></div>
+          <div class="  bg-gray-200 rounded-lg p-4 space-y-2 book-placeholder">
+    <div class="w-full h-60 bg-gray-300 rounded mb-4">
+      <img src="../lab1/images/image3.jpg" alt="book" class="h-[230px] w-[300px] mx-auto"/>
+    </div>
     <div class="h-4 bg-gray-300 rounded mb-2"></div>
     <div class="h-3 bg-gray-300 rounded sm:w-[150px]"></div>
      <div class="flex justify-between items-center">
     <div class="h-3 bg-gray-300 rounded w-2/3"></div>
-    <div class="h-5 bg-gray-300 rounded-full w-[30px]"></i></div>
+    <div class="h-5 bg-gray-300 rounded-full w-[30px]"><i class="fa-solid fa-heart"></i></div>
      </div>
   </div>
-           <div class="animate-pulse bg-gray-200 rounded-lg p-4 space-y-2">
-    <div class="w-full h-40 bg-gray-300 rounded mb-4"></div>
+           <div class="  bg-gray-200 rounded-lg p-4 space-y-2 book-placeholder">
+    <div class="w-full h-60 bg-gray-300 rounded mb-4">
+      <img src="../lab1/images/image4.jpg" alt="book" class="h-[230px] w-[300px] mx-auto"/>
+    </div>
     <div class="h-4 bg-gray-300 rounded mb-2"></div>
-    <div class="h-3 bg-gray-300 rounded sm:w-[150px]"></div>
+    <div class="h-3 bg-gray-300 rounded md:w-[150px]"></div>
      <div class="flex justify-between items-center">
     <div class="h-3 bg-gray-300 rounded w-2/3"></div>
-    <div class="h-5 bg-gray-300 rounded-full w-[30px]"></i></div>
+    <div class="h-5 bg-gray-300 rounded-full w-[30px]"><i class="fa-solid fa-heart"></i></div>
      </div>
   </div>
-           <div class="animate-pulse bg-gray-200 rounded-lg p-4 space-y-2">
-    <div class="w-full h-40 bg-gray-300 rounded mb-4"></div>
+           <div class="  bg-gray-200 rounded-lg p-4 space-y-2 book-placeholder">
+    <div class="w-full h-60 bg-gray-300 rounded mb-4">
+      <img src="../lab1/images/image3.jpg" alt="book" class="h-[230px] w-[300px] mx-auto"/>
+    </div>
     <div class="h-4 bg-gray-300 rounded mb-2"></div>
     <div class="h-3 bg-gray-300 rounded sm:w-[150px]"></div>
      <div class="flex justify-between items-center">
     <div class="h-3 bg-gray-300 rounded w-2/3"></div>
-    <div class="h-5 bg-gray-300 rounded-full w-[30px]"></i></div>
+    <div class="h-5 bg-gray-300 rounded-full w-[30px]"><i class="fa-solid fa-heart"></i></div>
      </div>
   </div>
-           <div class="animate-pulse bg-gray-200 rounded-lg p-4 space-y-2">
-    <div class="w-full h-40 bg-gray-300 rounded mb-4"></div>
+           <div class="  bg-gray-200 rounded-lg p-4 space-y-2 book-placeholder">
+    <div class="w-full h-60 bg-gray-300 rounded mb-4">
+      <img src="../lab1/images/image4.jpg" alt="book" class="h-[230px] w-[300px] mx-auto"/>
+    </div>
     <div class="h-4 bg-gray-300 rounded mb-2"></div>
     <div class="h-3 bg-gray-300 rounded sm:w-[150px]"></div>
      <div class="flex justify-between items-center">
     <div class="h-3 bg-gray-300 rounded w-2/3"></div>
-    <div class="h-5 bg-gray-300 rounded-full w-[30px]"></i></div>
+    <div class="h-5 bg-gray-300 rounded-full w-[30px]"><i class="fa-solid fa-heart"></i></div>
      </div>
   </div>
-  <div class="animate-pulse bg-gray-200 rounded-lg p-4 space-y-2">
-    <div class="w-full h-40 bg-gray-300 rounded mb-4"></div>
+  <div class=" bg-gray-200 rounded-lg p-4 space-y-2 book-placeholder">
+    <div class="w-full h-60 bg-gray-300 rounded mb-4">
+      <img src="../lab1/images/image1.jpg" alt="book" class="h-[230px] w-[300px] mx-auto"/>
+    </div>
     <div class="h-4 bg-gray-300 rounded mb-2"></div>
     <div class="h-3 bg-gray-300 rounded sm:w-[150px]"></div>
      <div class="flex justify-between items-center">
     <div class="h-3 bg-gray-300 rounded w-2/3"></div>
-    <div class="h-5 bg-gray-300 rounded-full w-[30px]"></i></div>
+    <div class="h-5 bg-gray-300 rounded-full w-[30px]"><i class="fa-solid fa-heart"></i></div>
      </div>
   </div>
 
@@ -194,8 +209,10 @@
       <p class="text-[12px]">Your go-to platform for book lovers, offering personalized recommendations, reviews, and a vibrant community to share your passion for reading.</p>
     <!--this is for the between -->
     </div>
-     <div>
-      <ul>
+     <div class="m">
+       <p class="pb-2 text-xl">Quick Links</p>
+      <ul class="flex flex-col  p-2 space-y-2">
+        
           <li><a href="./index.html"> Home </a></li>
           <li><a href="./about.html"> About </a></li>
           <li><a href="../lab2/favorite.html">Favorite</a></li>
@@ -208,10 +225,10 @@
 <div>
   <h2 class="font-semibold text-lg">Get Updates</h2>
   <p class="text-sm mb-3">Subscribe to our newsletter for the latest book releases and reviews.</p>
-  <div class="flex">
+  <div class="flex  w-[50px] ">
     <input type="email" placeholder="Enter your email"
-      class="flex-1 p-2 border border-gray-300 rounded-l-md focus:outline-none focus:border-amber-600">
-    <button class="bg-amber-700 text-white px-4 rounded-r-md hover:bg-orange-900 transition">Subscribe</button>
+      class="flex-1 p-2 border border-gray-300 rounded-l-md focus:outline-none focus:border-amber-600 md:w-[150px]">
+    <button class="bg-amber-700 text-white px-4 rounded-r-md hover:bg-orange-900 transition md:w-[100px]">Subscribe</button>
   </div>
 </div>
    </div>
@@ -227,7 +244,8 @@
 </div>
 
   </footer>
-   <script src="./main.js"></script>
+   <script  type="module" src="./main.js"></script>
+
 
 </body>
 </html>
