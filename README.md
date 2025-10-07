@@ -32,19 +32,25 @@ The app fetches real book data from the **Open Library API**, displays it dynami
 
 ##  Project Structure
 
-Phase-One-Capstone-Project/
-├── Lab1/
-|   ├── index.html
-|   ├── about.html
-|   ├── main.js
-|   └── images/
-|        ├── image1.png
-│        └── image2.png
-├── Lab2/
-│   ├── favorite.js
-│   └── favorite.html
-│       
-├── Lab3/
-│   └── fetchBooks.html
+Phase-One-Capstone-Project/   
+├───README.md
 │      
-└── README.md
+│       
+├───Lab1
+│   │   about.html
+│   │   index.html
+│   │   main.js
+│   │   
+│   └───Images
+│           book.jpg
+│           image1.jpg
+│           image2.jpg
+│           image3.jpg
+│           image4.jpg
+│
+├───Lab2
+│       favorite.html
+│       favorite.js
+│
+└───Lab3
+        fetchbooks.js
