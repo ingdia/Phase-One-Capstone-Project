@@ -146,48 +146,63 @@
   </main>
 
 
-      <footer class=" mt-20 bg-white  p-8  sm:px-20 ">
-   <div class="grid grid-cols-1 md:grid-cols-3 sm:gap-8">
+    <footer class="mt-20 bg-gray-300 p-8 sm:px-20">
+      <div class="grid grid-cols-1 md:grid-cols-3 sm:gap-8">
+        <!--these are the nav link-->
+        <div class="space-y-2">
+          <div class="text-[24px] text-orange-800 font-bold">
+            Book <span class="text-gray-900">Nest</span>
+          </div>
+          <p class="text-[14px]">
+            Your go-to platform for book lovers, offering personalized
+            recommendations, reviews, and a vibrant community to share your
+            passion for reading.
+          </p>
+          <!--this is for the between -->
+        </div>
+        <div class="">
+          <p class="pb-2 text-xl">Quick Links</p>
+          <ul class="flex flex-col p-2 space-y-2">
+            <li><a href="./index.html"> Home </a></li>
+            <li><a href="./about.html"> About </a></li>
+            <li><a href="../lab2/favorite.html">Favorite</a></li>
+          </ul>
+        </div>
 
-     <!--these are the nav link-->
-     <div class="space-y-2">
-       <div class="text-[24px] text-orange-800  font-bold " >Book <span class="text-gray-900">Nest</span></div>
-      <p class="text-[12px]">Your go-to platform for book lovers, offering personalized recommendations, reviews, and a vibrant community to share your passion for reading.</p>
-    <!--this is for the between -->
-    </div>
-     <div>
-      <ul>
-          <li><a href="./index.html"> Home </a></li>
-          <li><a href="./about.html"> About </a></li>
-          <li><a href="../lab2/favorite.html">Favorite</a></li>
-      </ul>
-      
-     </div>
-   
-    
-     <!--this is for the right side-->
-<div>
-  <h2 class="font-semibold text-lg">Get Updates</h2>
-  <p class="text-sm mb-3">Subscribe to our newsletter for the latest book releases and reviews.</p>
-  <div class="flex">
-    <input type="email" placeholder="Enter your email"
-      class="flex-1 p-2 border border-gray-300 rounded-l-md focus:outline-none focus:border-amber-600">
-    <button class="bg-amber-700 text-white px-4 rounded-r-md hover:bg-orange-900 transition">Subscribe</button>
-  </div>
-</div>
-   </div>
+        <!--this is for the right side-->
+        <div>
+          <h2 class="font-semibold text-lg">Get Updates</h2>
+          <p class="text-sm mb-3">
+            Subscribe to our newsletter for the latest book releases and
+            reviews.
+          </p>
+          <div class="flex w-[50px]">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="flex-1 p-2 border border-gray-400 rounded-l-md focus:outline-none focus:border-orange-900 md:w-[150px]"
+            />
+            <button
+              class="bg-orange-900 text-white px-4 rounded-r-md hover:bg-white hover:text-gray-700   hover:border-2 hover:border-orange-900 transition md:w-[100px]"
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </div>
 
-<div class=" flex flex-col items-center gap-2 justify-center border-t border-amber-600 mt-10 pt-4 sm:flex-row sm:justify-between">
-    <div> copyright</div>
-      <div class="flex space-x-4">
-        <i class="fa-brands fa-facebook text-[10px]"></i>
-        <i class="fa-brands fa-twitter text-[10px]"></i>
-        <i class="fa-brands fa-instagram text-[10px]"></i>
-        <i class="fa-brands fa-linkedin text-[10px]"></i>
-      </div> 
-</div>
-
-  </footer>
+      <div
+        class="flex flex-col items-center gap-2 justify-center border-t border-gray-600 mt-10 pt-4 sm:flex-row sm:justify-between"
+      >
+        <div>&copy; 2025 My Book Buddy. All rights reserved.</div>
+        <div class="flex space-x-4">
+          <i class="fa-brands fa-facebook text-[20px] hover:text-orange-800"></i>
+          <i class="fa-brands fa-twitter text-[20px] hover:text-orange-800"></i>
+          <i class="fa-brands fa-instagram text-[20px] hover:text-orange-800"></i>
+          <i class="fa-brands fa-linkedin text-[20px] hover:text-orange-800"></i>
+        </div>
+      </div>
+    </footer>
   <script  type="module" src="./favorite.js"></script>
 </body>
 </html>

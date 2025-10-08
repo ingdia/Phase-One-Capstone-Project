@@ -1,4 +1,4 @@
-import { fetchBooks } from "../lab3/fetchbooks.js";
+import { fetchBooks } from "../Lab3/fetchbooks.js";
 
 const menubtn = document.getElementById("humberger");
 const mobilenav = document.getElementById("mobile-nav");
