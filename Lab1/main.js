@@ -1,45 +1,26 @@
-// Hamburger menu toggle
+import { fetchBooks } from "../lab3/fetchbooks.js";
+
 const menubtn = document.getElementById("humberger");
 const mobilenav = document.getElementById("mobile-nav");
 
-menubtn.addEventListener('click', () => {
-  mobilenav.classList.toggle("hidden");
-});
-
-
-class Book {
-  constructor(id, image, title, author, genre, year) {
-    this.id = id;
-    this.image = image;
-    this.title = title;
-    this.author = author;
-    this.genre = genre;
-    this.year = year;
-  }
+if (menubtn) {
+  menubtn.addEventListener("click", () => {
+    mobilenav.classList.toggle("hidden");
+  });
 }
 
-const Bookstore = [
-  new Book(1, "../lab1/images/book.jpg", "Atomic Habits", "James Clear", "Self-help", 2018),
-  new Book(2, "../lab1/images/book.jpg", "The Subtle Art of Not Giving a F*ck", "Mark Manson", "Self-help", 2016),
-  new Book(3, "../lab1/images/book.jpg", "Can't Hurt Me", "David Goggins", "Biography", 2018),
-  new Book(4, "../lab1/images/book.jpg", "The Lean Startup", "Eric Ries", "Business", 2011),
-  new Book(5, "../lab1/images/book.jpg", "Deep Work", "Cal Newport", "Self-help", 2016),
-  new Book(6, "../lab1/images/book.jpg", "The 7 Habits of Highly Effective People", "Stephen R. Covey", "Self-help", 1989),
-  new Book(7, "../lab1/images/book.jpg", "The Alchemist", "Paulo Coelho", "Fiction", 1988),
-  new Book(8, "../lab1/images/book.jpg", "The Power of Now", "Eckhart Tolle", "Spirituality", 1997),
-  new Book(9, "../lab1/images/book.jpg", "Thinking, Fast and Slow", "Daniel Kahneman", "Psychology", 2011),
-  new Book(10, "../lab1/images/book.jpg", "Educated", "Tara Westover", "Memoir", 2018)
-];
-
-
-let favoriteBooks = JSON.parse(localStorage.getItem('favoriteBooks')) || [];
-
+let favoriteBooks = JSON.parse(localStorage.getItem("favoriteBooks")) || [];
 
 function renderBooks(books) {
   const grid = document.getElementById("book-grid");
   if (!grid) return;
 
-  grid.innerHTML = ""; // clear placeholders
+  grid.innerHTML = ""; 
+
+  if (books.length === 0) {
+    grid.innerHTML = `<p class="text-center col-span-full">No books found.</p>`;
+    return;
+  }
 
   books.forEach(book => {
     const isFav = favoriteBooks.some(fav => fav.id === book.id);
@@ -48,13 +29,13 @@ function renderBooks(books) {
     card.className = "bg-gray-200 rounded-lg p-4 space-y-2";
 
     card.innerHTML = `
-      <div class="w-full h-60 bg-gray-300 rounded mb-4">
-        <img src="${book.image}" alt="${book.title}" class="h-[230px] w-[300px] mx-auto"/>
+      <div class="w-full h-60 bg-gray-300 rounded mb-4 flex items-center justify-center overflow-hidden">
+        <img src="${book.image}" alt="${book.title}" class="h-[230px] w-[300px] object-cover mx-auto"/>
       </div>
       <h3 class="font-semibold text-center">${book.title}</h3>
       <p class="text-sm text-center">${book.author}</p>
       <div class="flex justify-between items-center">
-        <span class="h-6 bg-gray-300 rounded w-2/3 flex items-center justify-center">${book.genre}</span>
+        <span class="text-xs bg-gray-100 rounded px-2 py-1">${book.genre}</span>
         <i class="fa-solid fa-heart cursor-pointer ${isFav ? "text-red-500" : "text-gray-600"}" data-id="${book.id}"></i>
       </div>
     `;
@@ -62,10 +43,10 @@ function renderBooks(books) {
     grid.appendChild(card);
   });
 
- // add an event listener to each favorite icon
+  // Favorite icon listeners
   document.querySelectorAll("i[data-id]").forEach(icon => {
     icon.addEventListener("click", () => {
-      const bookId = parseInt(icon.getAttribute("data-id"));
+      const bookId = icon.getAttribute("data-id");
       const isFav = favoriteBooks.some(fav => fav.id === bookId);
 
       if (isFav) {
@@ -73,18 +54,50 @@ function renderBooks(books) {
         icon.classList.remove("text-red-500");
         icon.classList.add("text-gray-600");
       } else {
-        const book = Bookstore.find(b => b.id === bookId);
+        const book = books.find(b => b.id === bookId);
         favoriteBooks.push(book);
         icon.classList.add("text-red-500");
         icon.classList.remove("text-gray-600");
       }
 
-      localStorage.setItem('favoriteBooks', JSON.stringify(favoriteBooks));
+      localStorage.setItem("favoriteBooks", JSON.stringify(favoriteBooks));
     });
   });
 }
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  renderBooks(Bookstore);
+document.addEventListener("DOMContentLoaded", async () => {
+  const grid = document.getElementById("book-grid");
+  if (grid) grid.innerHTML = `<p class="text-center col-span-full">Loading...</p>`;
+
+  const books = await fetchBooks("books"); 
+  renderBooks(books);
 });
+
+const searchInput = document.getElementById("search-input");
+const searchBtn = document.getElementById("search-btn");
+
+if (searchBtn && searchInput) {
+  searchBtn.addEventListener("click", async (e) => {
+    e.preventDefault(); 
+
+    let query = searchInput.value.trim();
+    if (query.length < 2) {
+      query = "the"; 
+    }
+
+    const books = await fetchBooks(query);
+    renderBooks(books);
+  });
+
+  searchInput.addEventListener("keyup", async (e) => {
+    if (e.key === "Enter") {
+      let query = searchInput.value.trim();
+      if (query.length < 2) {
+        query = "the";
+      }
+      const books = await fetchBooks(query);
+      renderBooks(books);
+    }
+  });
+}

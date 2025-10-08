@@ -1,11 +1,8 @@
-
 document.addEventListener("DOMContentLoaded", () => {
   const grid = document.getElementById("favorite-grid");
   if (!grid) return;
 
-  // Get favorites from localStorage
   let favoriteBooks = JSON.parse(localStorage.getItem('favoriteBooks')) || [];
-
 
   function renderFavorites() {
     grid.innerHTML = "";
@@ -33,18 +30,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
       grid.appendChild(card);
     });
-
-    // Add event listeners to remove buttons
-    document.querySelectorAll("i[data-id]").forEach(icon => {
-      icon.addEventListener("click", () => {
-        const bookId = parseInt(icon.getAttribute("data-id"));
-        favoriteBooks = favoriteBooks.filter(b => b.id !== bookId);
-        localStorage.setItem('favoriteBooks', JSON.stringify(favoriteBooks));
-        renderFavorites(); 
-      });
-    });
   }
 
   
+  grid.addEventListener("click", (e) => {
+    if (e.target.matches("i[data-id]")) {
+      const bookId = e.target.getAttribute("data-id");
+      favoriteBooks = favoriteBooks.filter(b => b.id !== bookId);
+      localStorage.setItem('favoriteBooks', JSON.stringify(favoriteBooks));
+      renderFavorites();
+    }
+  });
+
   renderFavorites();
 });

@@ -44,13 +44,23 @@
        
     </header>
      <main class=" pt-[80px] sm:pt-[120px] px-4 sm:px-20 space-y-2">
-   
 
     <!--this the  book store-->
-    <div class="text-center space-y-4 mt-40">
-      <h1 class="text-[32px]"><span class="text-orange-800">Explore </span>Book</h1>
+    <div class="text-center space-y-4 ">
+      <h1 class="text-[32px]"><span class="text-orange-800">My </span> Favorite <span class="text-orange-800">Book </span></h1>
       <p>Discover your next favorite book by browsing our curated collections and categories.</p>
-       <!--FILTERS-->
+               <div class="max-w-3xl mx-auto mt-8">
+            <div class="relative">
+                <input 
+                    type="text" 
+                    placeholder="Search for books, authors, or genres..." 
+                    class="w-full py-3 px-5 pr-12 rounded-full border-2 border-gray-300 focus:border-orange-800 focus:outline-none shadow-sm"
+                />
+                <button class="absolute right-2 top-1/2 -translate-y-1/2 bg-orange-800 text-white w-10 h-10 rounded-full hover:bg-orange-900 transition flex items-center justify-center">
+                    <i class="fa-solid fa-search"></i>
+                </button>
+            </div>
+        </div>
        <!--grid card for the books (placeholders)-->
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4  gap-4 mt-10 " id="favorite-grid">
        <div class="  bg-gray-200 rounded-lg p-4 space-y-2">
