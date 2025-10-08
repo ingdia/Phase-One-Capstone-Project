@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script
+      src="https://kit.fontawesome.com/297096f977.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>About - Book Nest</title>
+    <style>
+      .book {
+        animation: float 2s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+    </style>
+  </head>
+  <body class="font-serif relative min-h-screen bg-[#f8f5f0]">
+    <!-- Header (same as home page) -->
+    <header
+      class="fixed w-full z-50 flex justify-between p-4 sm:px-20 bg-white shadow"
+    >
+      <div class="text-[24px] text-orange-800 font-bold">
+        Book <span class="text-gray-900">Nest</span>
+      </div>
+      <nav class="hidden sm:flex space-x-4">
+        <a href="./index.html" class="hover:text-orange-800">Home</a>
+        <a href="../lab2/favorite.html" class="hover:text-orange-800"
+          >Favorite</a
+        >
+        <a href="./about.html" class="hover:text-orange-800">About</a>
+      </nav>
+      <button class="md:hidden" id="humberger">
+        <i class="fa-solid fa-bars text-[30px]"></i>
+      </button>
+      <div class="sm:space-x-4 hidden sm:flex items-center">
+        <button
+          class="border-2 text-white bg-orange-800 border-orange-800 rounded-2xl sm:px-8 px-2 py-1 hover:border-orange-800 hover:bg-white hover:text-orange-800"
+        >
+          Login
+        </button>
+      </div>
+    </header>
+
+    <main class="pt-[120px] sm:pt-[140px] px-4 sm:px-20 space-y-16">
+      <!-- Hero Section -->
+      <section class="text-center space-y-4">
+        <h1 class="text-[42px] font-bold">
+          About <span class="text-orange-800">Book</span> Nest
+        </h1>
+        <p class="text-xl text-gray-700 max-w-2xl mx-auto">
+          Connecting readers worldwide with books that inspire, educate, and
+          entertain. Our platform helps you discover your next favorite read,
+          save it, and share with a vibrant reading community.
+        </p>
+      </section>
+
+      <!-- Mission & Vision -->
+      <section class="grid md:grid-cols-2 gap-8 items-center">
+        <div class="space-y-4">
+          <h2 class="text-3xl font-semibold text-orange-800">Our Mission</h2>
+          <p class="text-gray-700">
+            To help readers find books that resonate with them, foster a love
+            for reading, and create a community where book lovers can share
+            their insights and recommendations.
+          </p>
+          <h2 class="text-3xl font-semibold text-orange-800">Our Vision</h2>
+          <p class="text-gray-700">
+            To be the go-to platform for readers globally, offering curated book
+            recommendations and personalized experiences that make reading
+            accessible, enjoyable, and meaningful.
+          </p>
+        </div>
+        <div class="flex justify-center">
+          <img
+            src="../lab1/images/book.jpg"
+            alt="Books"
+            class="h-72 w-48 sm:h-[450px] sm:w-[350px] rounded-lg shadow-lg book"
+          />
+        </div>
+      </section>
+
+      
+      <section class="space-y-8">
+        <h2 class="text-3xl font-semibold text-center text-orange-800">
+          How It Works
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8 text-center">
+          <div
+            class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition"
+          >
+            <i class="fa-solid fa-book-open text-4xl text-orange-800 mb-4"></i>
+            <h3 class="font-semibold text-xl mb-2">Browse Books</h3>
+            <p class="text-gray-700">
+              Explore curated book collections and discover recommendations
+              tailored to your taste.
+            </p>
+          </div>
+          <div
+            class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition"
+          >
+            <i class="fa-solid fa-heart text-4xl text-orange-800 mb-4"></i>
+            <h3 class="font-semibold text-xl mb-2">Save Favorites</h3>
+            <p class="text-gray-700">
+              Add books to your favorites list and keep track of what you love
+              to read.
+            </p>
+          </div>
+          <div
+            class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition"
+          >
+            <i class="fa-solid fa-users text-4xl text-orange-800 mb-4"></i>
+            <h3 class="font-semibold text-xl mb-2">Join Community</h3>
+            <p class="text-gray-700">
+              Share insights, reviews, and connect with readers who share your
+              passion.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section class="text-center mt-8">
+        <p class="text-lg text-gray-700 mb-4">
+          Ready to discover your next favorite book?
+        </p>
+        <a
+          href="./index.html"
+          class="inline-block bg-transparent text-gray-900 border-2 border-orange-800 px-6 py-3 rounded-full hover:bg-white hover:text-orange-800 transition"
+          >Explore Books</a
+        >
+      </section>
+    </main>
+
+    <!-- Footer (same as home page) -->
+    <footer class="mt-20 bg-white p-8 sm:px-20">
+      <div class="grid grid-cols-1 md:grid-cols-3 sm:gap-8">
+        <div class="space-y-2">
+          <div class="text-[24px] text-orange-800 font-bold">
+            Book <span class="text-gray-900">Nest</span>
+          </div>
+          <p class="text-[12px]">
+            Your go-to platform for book lovers, offering personalized
+            recommendations, reviews, and a vibrant community to share your
+            passion for reading.
+          </p>
+        </div>
+        <div>
+          <p class="pb-2 text-xl">Quick Links</p>
+          <ul class="flex flex-col p-2 space-y-2">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="../lab2/favorite.html">Favorite</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="font-semibold text-lg">Get Updates</h2>
+          <p class="text-sm mb-3">
+            Subscribe to our newsletter for the latest book releases and
+            reviews.
+          </p>
+          <div class="flex w-[50px]">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="flex-1 p-2 border border-gray-300 rounded-l-md focus:outline-none focus:border-amber-600 md:w-[150px]"
+            />
+            <button
+              class="bg-amber-700 text-white px-4 rounded-r-md hover:bg-orange-900 transition md:w-[100px]"
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col items-center gap-2 justify-center border-t border-amber-600 mt-10 pt-4 sm:flex-row sm:justify-between"
+      >
+        <div>© 2025 Book Nest</div>
+        <div class="flex space-x-4">
+          <i class="fa-brands fa-facebook text-[10px]"></i>
+          <i class="fa-brands fa-twitter text-[10px]"></i>
+          <i class="fa-brands fa-instagram text-[10px]"></i>
+          <i class="fa-brands fa-linkedin text-[10px]"></i>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
