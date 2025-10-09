@@ -52,37 +52,40 @@ The app fetches real book data from the **Open Library API**, displays it dynami
 ## Project Structure
 
 Phase-One-Capstone-Project
-ª   README.md
-ª   structure.txt
-ª   
-+---.vscode
-ª       settings.json
-ª       
-+---Lab1
-ª   ª   about.html
-ª   ª   index.html
-ª   ª   main.js
-ª   ª   
-ª   +---Images
-ª           about.png
-ª           about2.png
-ª           addingtofav.png
-ª           book.jpg
-ª           explore.png
-ª           footer.png
-ª           Hero.png
-ª           image.png
-ª           image1.jpg
-ª           image2.jpg
-ª           image3.jpg
-ª           image4.jpg
-ª           
-+---Lab2
-ª       favorite.html
-ª       favorite.js
-ª       
-+---Lab3
-        fetchbooks.js
+├── README.md                        # Project overview and documentation
+├── LICENSE                          # (optional) License information
+│
+├── Lab1/                            # Lab 1: Basic HTML, CSS, and JS setup
+│   ├── index.html                   # Home page
+│   ├── about.html                   # About page
+│   ├── main.js                      # Main JavaScript file
+│   ├── style.css                    # (optional) Custom styling file
+│   └── Images/                      # All images for Lab 1
+│       ├── hero.png
+│       ├── explore.png
+│       ├── footer.png
+│       ├── about1.png
+│       ├── about2.png
+│       └── addingtofav.png
+│
+├── Lab2/                            # Lab 2: Favorites functionality
+│   ├── favorite.html                # Favorites page
+│   ├── favorite.js                  # JS logic for managing favorites
+│   └── style.css                    # (optional) Styles for favorite page
+│
+├── Lab3/                            # Lab 3: API integration
+│   ├── fetchbooks.js                # JavaScript for fetching book data
+│   ├── api-test.html                # (optional) Simple test page for API
+│   └── style.css                    # (optional) Styling for fetched results
+│
+├── assets/                          # Shared assets (optional)
+│   ├── icons/
+│   ├── logos/
+│   └── fonts/
+│
+└── docs/                            # Documentation (optional)
+    └── presentation-slides/
+
         
 
 
@@ -107,7 +110,7 @@ cd Phase-One-Capstone-Project/Lab1
 
 ###  **2. Usage Instructions**
 Explain briefly how the website works or how users can interact with it:
-```markdown
+
 ## Usage
 
 - On the **Home Page**, browse or search for books.  
