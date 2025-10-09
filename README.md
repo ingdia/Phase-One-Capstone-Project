@@ -51,26 +51,24 @@ The app fetches real book data from the **Open Library API**, displays it dynami
 
 ## Project Structure
 
-Phase-One-Capstone-Project/  
-├── README.md                # Project overview and instructions
-│
-├── Lab1                     # Lab 1: Basic HTML, CSS, and JavaScript
-│   ├── index.html           # Main page
-│   ├── about.html           # About page
-│   ├── main.js              # JavaScript for Lab1-LAb2 and Lab3 functionality
-│   └── Images/              # Images used in Lab 1
+Phase-One-Capstone-Project/
+├── README.md
+├── Lab1/
+│   ├── index.html
+│   ├── about.html
+│   ├── main.js
+│   └── Images/
 │       ├── book.jpg
 │       ├── image1.jpg
 │       ├── image2.jpg
 │       ├── image3.jpg
 │       └── image4.jpg
-│
-├── Lab2                     # Lab 2: Favorites functionality
-│   ├── favorite.html        # Favorites page
-│   └── favorite.js          # JavaScript to manage favorites
-│
-└── Lab3                     # Lab 3: Fetching books from API
-    └── fetchbooks.js        # JavaScript for API calls
+├── Lab2/
+│   ├── favorite.html
+│   └── favorite.js
+└── Lab3/
+    └── fetchbooks.js
+
 
 ## Installation and Setup
 
@@ -100,6 +98,5 @@ Explain briefly how the website works or how users can interact with it:
 - View your saved books on the **Favorites Page**.  
 - Learn more about the project and team on the **About Page**.
 
-```
 
 
